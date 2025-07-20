@@ -1,0 +1,72 @@
+{
+  "name": "echo-n-brackets",
+  "displayName": "Echo & Brackets",
+  "description": "Brings poetic echos into your coding flow based on your mood.",
+  "version": "1.1.0",
+  "publisher": "princyrusty",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:poetry-sidebar",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+     "viewsContainers": {
+     "activitybar": [
+        {
+         "id": "echoAndBrackets",
+         "title": "Echo & Brackets",
+         "icon": "media/icon.svg"
+        }
+     ]
+   },
+"views": {
+  "echoAndBrackets": [
+    {
+      "id": "echoAndBrackets.poetrySidebar",
+      "name": "Poetry Panel"
+    }
+  ]
+},
+    "configuration": {
+      "type": "object",
+      "title": "Echo & Brackets Settings",
+      "properties": {
+        "echoBrackets.mood": {
+          "type": "string",
+          "default": "default",
+          "enum": [
+            "default",
+            "inspirational",
+            "melancholic",
+            "playful"
+          ],
+          "description": "Choose the poetic mood of Echo & Brackets echos."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.0.15",
+    "@types/vscode": "^1.102.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^4.9.5",
+    "vscode-test": "^1.6.0"
+  }
+}
