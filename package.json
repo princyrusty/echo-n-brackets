@@ -4,6 +4,10 @@
   "description": "Brings poetic echos into your coding flow based on your mood.",
   "version": "1.1.0",
   "license": "MIT",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/princyrusty/echo-n-brackets.git"
+},
   "publisher": "princyrusty",
   "engines": {
     "vscode": "^1.102.0"
