@@ -3,9 +3,10 @@
   "displayName": "Echo & Brackets",
   "description": "Brings poetic echos into your coding flow based on your mood.",
   "version": "1.1.0",
+  "license": "MIT",
   "publisher": "princyrusty",
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^1.102.0"
   },
   "categories": [
     "Other"
@@ -16,23 +17,23 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-     "viewsContainers": {
-     "activitybar": [
+    "viewsContainers": {
+      "activitybar": [
         {
-         "id": "echoAndBrackets",
-         "title": "Echo & Brackets",
-         "icon": "media/icon.svg"
+          "id": "echoAndBrackets",
+          "title": "Echo & Brackets",
+          "icon": "media/icon.svg"
         }
-     ]
-   },
-"views": {
-  "echoAndBrackets": [
-    {
-      "id": "echoAndBrackets.poetrySidebar",
-      "name": "Poetry Panel"
-    }
-  ]
-},
+      ]
+    },
+    "views": {
+      "echoAndBrackets": [
+        {
+          "id": "echoAndBrackets.poetrySidebar",
+          "name": "Poetry Panel"
+        }
+      ]
+    },
     "configuration": {
       "type": "object",
       "title": "Echo & Brackets Settings",
